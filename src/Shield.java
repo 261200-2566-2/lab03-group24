@@ -24,6 +24,10 @@ public class Shield {
     public String getName(){return name;}
     public int getLevel(){return shieldLevel;}
 
+    public double getDefense() {
+        return defense;
+    }
+
     // For test
     public void ShowStats(){
         System.out.println("Name : " + name);

@@ -24,6 +24,10 @@ public class Sword {
     public String getName(){return name;}
     public int getLevel(){return swordLevel;}
 
+    public double getDamage() {
+        return damage;
+    }
+
     // For test
     public void ShowStats(){
         System.out.println("Name : " + name);

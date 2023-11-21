@@ -34,9 +34,13 @@ public class Character {
         level += 1;
         UpdateStats();
     }
-    public void EquipSword(Sword sword){
-        this.sword = sword;
-        UpdateSpeed();
+    public void Equip(Sword sword){
+        if(this.sword == null){
+            this.sword = sword;
+            UpdateSpeed();
+        }else{
+            System.out.println("Need to unequip " + sword.getName() + " first.");
+        }
     }
     public void UnequipSword(){
         if(sword != null){
@@ -46,9 +50,13 @@ public class Character {
             System.out.println("Sword currently unequipped.");
         }
     }
-    public void EquipShield(Shield shield){
-        this.shield = shield;
-        UpdateSpeed();
+    public void Equip(Shield shield){
+        if(this.shield == null){
+            this.shield = shield;
+            UpdateSpeed();
+        }else{
+            System.out.println("Need to unequip " + shield.getName() + " first.");
+        }
     }
 
     public void UnequipShield(){
@@ -57,6 +65,23 @@ public class Character {
             UpdateSpeed();
         }else{
             System.out.println("Sword currently unequipped.");
+        }
+    }
+
+    public static void Fight(Character p1,Character p2){
+        if(p1.sword != null){
+            if(p2.shield != null){
+
+                if(p1.sword.getDamage()>p2.shield.getDefense()){
+                    p2.hp -= p1.sword.getDamage() - p2.shield.getDefense();
+                }else{
+                    System.out.println("Block!! Nothing happen ~");
+                }
+            }else{
+                p2.hp -= p1.sword.getDamage();
+            }
+        }else{
+            System.out.println("no sword!");
         }
     }
 
