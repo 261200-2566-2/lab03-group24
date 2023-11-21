@@ -2,16 +2,21 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+    //Test
+        Character james = new Character(0,50);
+        Sword excalibur = new Sword("Excalibur",5,10);
+        Shield rustyShield = new Shield("Rusty Shield",5,5);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        james.EquipSword(excalibur);
+        //james.EquipShield(rustyShield);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        james.ShowStats();
+        System.out.println("====================================");
+        excalibur.Upgrade();
+        rustyShield.ShowStats();
+        System.out.println("====================================");
+        excalibur.ShowStats();
+        System.out.println("====================================");
+        james.ShowStats();
     }
 }
