@@ -2,16 +2,62 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        //james charactor
+        Character james = new Character(9999,50);
+        Sword excalibur = new Sword("Excalibur",5,10);
+        Shield rustyShield = new Shield("Rusty Shield",5,5);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // tent charactor
+        Character tent = new Character(100,100);
+        Sword tenchin = new Sword("tenchin",0,11);
+        Shield hung = new Shield("hung Shield",10,6);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+//test upgradeequipment
+//        excalibur.ShowStats();
+//        System.out.println("=================================================");
+//        excalibur.Upgrade();
+//        excalibur.ShowStats();
+//        System.out.println("=================================================");
+//        hung.ShowStats();
+//        System.out.println("=================================================");
+//        hung.Upgrade();
+//        hung.ShowStats();
+//        System.out.println("=================================================");
+
+//test Characterlevelup
+//        james.ShowStats();
+//        james.LevelUp();
+//        james.ShowStats();
+//        System.out.println("=================================================");
+//        tent.ShowStats();
+//        tent.LevelUp();
+//        tent.ShowStats();
+//        System.out.println("=================================================");
+
+
+
+// Test Fight
+//         james.Equip(excalibur);
+//         james.Equip(rustyShield);
+//         james.ShowStats();
+//         System.out.println("=================================================");
+//         excalibur.ShowStats();
+//         System.out.println("=================================================");
+//         tent.Equip(hung);
+//         tent.Equip(tenchin);
+//         tent.ShowStats();
+//         tent.LevelUp();
+//         System.out.println("=================================================");
+//         tenchin.ShowStats();
+//         hung.ShowStats();
+//         System.out.println("=================================================");
+//
+//         Character.Fight(james,tent);
+//
+//         james.ShowStats();
+//         System.out.println("=================================================");
+//         tent.ShowStats();
+//         System.out.println("=================================================");
+
     }
 }
