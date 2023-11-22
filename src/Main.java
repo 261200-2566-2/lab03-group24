@@ -3,14 +3,14 @@
 public class Main {
     public static void main(String[] args) {
         //james charactor
-        Character james = new Character(9999,50);
-        Sword excalibur = new Sword("Excalibur",5,10);
+        Character james = new Character("james",100,50);
+        Sword excalibur = new Sword("Excalibur",5,11);
         Shield rustyShield = new Shield("Rusty Shield",5,5);
 
         // tent charactor
-        Character tent = new Character(100,100);
-        Sword tenchin = new Sword("tenchin",0,11);
-        Shield hung = new Shield("hung Shield",10,6);
+        Character tent = new Character("tent",100,60);
+        Sword tenchin = new Sword("tenchin",5,11);
+        Shield hung = new Shield("hung Shield",5,5);
 
 //test upgradeequipment
 //        excalibur.ShowStats();
@@ -37,27 +37,28 @@ public class Main {
 
 
 // Test Fight
-//         james.Equip(excalibur);
-//         james.Equip(rustyShield);
-//         james.ShowStats();
-//         System.out.println("=================================================");
-//         excalibur.ShowStats();
-//         System.out.println("=================================================");
-//         tent.Equip(hung);
-//         tent.Equip(tenchin);
-//         tent.ShowStats();
-//         tent.LevelUp();
-//         System.out.println("=================================================");
-//         tenchin.ShowStats();
-//         hung.ShowStats();
-//         System.out.println("=================================================");
-//
-//         Character.Fight(james,tent);
-//
-//         james.ShowStats();
-//         System.out.println("=================================================");
-//         tent.ShowStats();
-//         System.out.println("=================================================");
+         james.Equip(excalibur);
+         james.Equip(rustyShield);
+         james.ShowStats();
+         System.out.println("=================================================");
+         excalibur.ShowStats();
+         rustyShield.ShowStats();
+         System.out.println("=================================================");
+         tent.Equip(hung);
+         tent.Equip(tenchin);
+         tent.ShowStats();
+         tent.LevelUp();
+         System.out.println("=================================================");
+         tenchin.ShowStats();
+         hung.ShowStats();
+         System.out.println("=================================================");
+
+         Character.Fight(james,tent);
+
+         james.ShowStats();
+         System.out.println("=================================================");
+         tent.ShowStats();
+         System.out.println("=================================================");
 
     }
 }
