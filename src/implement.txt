@@ -1,0 +1,75 @@
+design and implement a class for an RPG character think about
+
+1) how and where to store data ?
+ans : ใช้วิธี encapsulation สร้างตัวแปรเป็น private โดยมี geter และ seter methods ในการดึงและ set ข้อมูล
+       เก็บไว้ใน แต่ละ class นั้นๆ
+
+
+
+2) what operations are needed ?
+ans :
+Character class
+    variable :
+        name : ชื่อตัวละคร
+        level : เลเวลตัวละคร
+        hp : พลังชีวิตของตัวละคร ณ ตอนนั้น
+        maxHp : พลังชีวิตสูงสุดของตัวละคร
+        mana : มานาของตัวละคร ณ ตอนนั้น
+        maxMana : มานาสูงสุดของตัวละคร
+        baseSpeed : ความเร็วเริ่มต้น
+        speed : ความเร็วของตัวละคร ณ ตอนนั้น
+        maxSpeed : ความเร็วสูงสุดของตัวละคร
+        sword : ดาบที่ตัวละครสวมใส่อยู่
+        shield : โล่ที่ตัวละครถืออยู่
+
+    methods :
+        void UpdateStats() : คำณวนค่า maxHp maxMana maxSpeed ใหม่ตามเลเวล
+        void UpdateSpeed() : คำณวนค่า speed ของตัวละครตามอุปกรณ์ที่ถืออยู่
+        void LevelUp() : อัพเลเวลตัวละครทีละ 1 เลเวล
+        void Equip(Sword) : สวมใส่ดาบให้ตัวละคร
+        void Equip(Shield) : สวมใส่โล่ให้ตัวละคร
+        void UnequipSword() : ถอดดาบที่ตัวละครสวมใส่อยู่
+        void UnequipShield() : ถอดโล่ที่ตัวละครสวมใส่อยู่
+        void attack(Character) : โจมตีโดยถ้ามีดาบก็สามารถโจมตีได้ และถ้าอีกตัวละครมีโล่ก็จะลดความเสียหายที่ได้รับ แต่ถ้าไม่มีก็จะโดนความเสียหายเต็มๆ แต่ถ้าไม่มีดาบจะไม่สามารถโจมตีได้
+        void takeDamage(Double) : ลด hp ตาม damage ที่ได้รับ
+        Static void Fight(Character ,Character) :  นำตัวละคร 2 ตัวมาต่อสู้กันโดยที่ตัวละครที่มี speed มากกว่าจะได้โจมตีก่อน และตามด้วยตัวละครอีกตัวโจมตี ถ้าหากมี speed เท่ากันตัวละครททั้ง 2 ตัวจะสุ่มว่าใครเป็นคนโจมตีก่อน
+        void ShowStats : print ค่า stats ทั้งหมด ณ ตอนนั้น
+
+    Sword subclass
+    variable :
+              name: ชื่อดาบ
+              swordlevel : เลเวลของดาบ
+              baseDamage :  พลังของการโจมตีเริ่มต้น
+              damage : พลังการโจมตี
+              speedDecreaseRate :   ความเร็วที่ลดลงตามเลเวลของดาบ
+
+    methods :
+        void UpdateSwordStats() : คำนวณการอัพเดทของดาบ เมื่อดาบมีการอัพเลเวล
+        void Upgrade() : อัพเกรดดาบทุกครั้งละ 1 เลเวล
+        Sword(String name, int level, int baseDamage) : สร้างชื่อ กำหนดเลเวล และ ค่าพลังโจมตีเริ่มต้นให้กับดาบของคุณ
+        double getSpeedDecreaseRate() : ส่งค่าความเร็วที่ลดลงตามเลเวลของดาบ ออกไป
+        String getName() : ส่งชื่อดาบออกไป
+        int getLevel() : ส่งเลเวลของดาบออกไป
+        double getDamage() : ส่งค่าความเสียหายออกไป
+        void ShowStats() : print ค่า stats ทั้งหมด ณ ตอนนั้น
+
+    Shield subclass
+    variable :
+              name: ชื่อดาบ
+              shieldlevel : เลเวลของโล่
+              baseDefense :  พลังของการป้องกันเริ่มต้น
+              defense : พลังการป้องกัน
+              speedDecreaseRate :   ความเร็วที่ลดลงตามเลเวลของโล่
+
+    methods :
+         void UpdateShieldStats() : คำนวณการอัพเดทของโล่ เมื่อโล่มีการอัพเลเวล
+         void Upgrade() : อัพเกรดโล่ทุกครั้งละ 1 เลเวล
+         Shield(String name, int level, int baseDefense) : สร้างชื่อ กำหนดเลเวล และ ค่าพลังโจมตีเริ่มต้นให้กับโล่ของคุณ
+         double getSpeedDecreaseRate() : ส่งค่าความเร็วที่ลดลงตามเลเวลของโล่ออกไป
+         String getName() : ส่งชื่อโล่ออกไป
+         int getLevel() : ส่งเลเวลของโล่ออกไป
+         double getDefense() : ส่งค่าการป้องกันออกไป
+         void ShowStats : print ค่า stats ทั้งหมด ณ ตอนนั้น
+
+3) how and where to compute information ?
+ans : see in question 2 ()
